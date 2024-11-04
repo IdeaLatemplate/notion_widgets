@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			.gochi-hand-regular {
+  font-family: "Gochi Hand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 8px 100px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 2px solid #c8e8c0;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #e8c889;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="Home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+		<a id="Recipes" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-utensils"></i></i> Recepies</a>
+		<a id="Groceries" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-cart-shopping"></i></i> Groceries</a>
+		<a id="Whishlist" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-heart"></i></i></i> Whishlist</a>
+		<a id="Macros" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-magnifying-glass-chart"></i></i> Macros</a>
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://home.com", '_blank').focus();
+			else if (id == "Recipes")
+				window.open("https://Recipes.com", '_blank').focus();
+			else if (id == "Groceries")
+				window.open("https://groceries.com", '_blank').focus();
+			else if (id == "Whishlist")
+				window.open("https://Whishlist.com", '_blank').focus();
+			else if (id == "Macros")
+				window.open("https://Macros.com", '_blank').focus();
+		}
+	</script>
+
+
+</body>
+
+</html>
